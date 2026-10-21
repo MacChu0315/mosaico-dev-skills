@@ -53,4 +53,8 @@ python3 -m unittest discover -s tests -v
 
 [来源与许可](docs/SOURCES.md)记录 Echoy 技能分支及 Peek 交接提交，保留原历史验证说明。新的独立库不复制来源仓库 `.git` 或产品历史。
 
-当前仅本地建立和提交。远程发布的建议仓库、顺序、完整性检查和停止条件见 [发布准备](docs/INTEGRATION.md)；本轮不创建远程仓库、不推送、不更改 Echoy 默认分支。技能库更新后，由消费工程明确更新 submodule commit 并检查接入。
+本库独立维护。Echoy 使用 `mosaico-dev-skills` 子模块目录固定引用本库的提交；GitHub 中点击该条目会进入本库的对应版本。Echoy 的旧技能分支只作为子模块入口，不再复制正文。
+
+**上游更新不会自动改变消费工程。** 普通 `git submodule update --init` 检出父项目记录的版本；只有明确更新子模块、验证并提交新的 gitlink，消费工程才升级。不要把跟踪 `main` 的配置误认为自动升级。
+
+[接入与更新命令](docs/INTEGRATION.md)区分技能入口分支和基于产品 `master` 的接入改动；后者只新增子模块／技能目录链接和文档，不改变产品行为。

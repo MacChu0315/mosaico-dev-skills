@@ -5,4 +5,4 @@
 - `.agents/skills/` is the engineering source of truth. Consuming projects link whole skill directories from a pinned submodule; do not independently edit linked copies or silently update their gitlink.
 - Preserve source/license attribution in `docs/SOURCES.md`. Separate historical source-project evidence, structure tests, agent scenarios and hardware results. A user stopping short of a target does not turn it into a pass.
 - Validate with `python3 -m unittest discover -s tests -v`; retain meaningful submodule clone/link and skill portability checks when integration changes. No shared SDK upgrades or hardware operations for documentation validation.
-- Current status: `docs/PROJECT_STATE.md`. Local integration and unexecuted remote publication steps: `docs/INTEGRATION.md`.
+- Current status: `docs/PROJECT_STATE.md`. Submodule consumption and explicit version-update semantics: `docs/INTEGRATION.md`.
