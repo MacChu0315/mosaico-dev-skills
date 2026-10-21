@@ -2,7 +2,7 @@
 
 ## 仓库关系
 
-`mosaico-dev-skills` 是技能正文、参考和离线验证的唯一维护位置。
+`MacChu0315/mosaico-dev-skills` 的 `main` 是技能正文、参考和离线验证的唯一维护位置。远程 URL 为 `https://github.com/MacChu0315/mosaico-dev-skills.git`。
 Echoy 通过一个 Git submodule 固定引用它，而不是复制内容。GitHub 上
 `mosaico-dev-skills @ <commit>` 条目可跳转到独立库的对应版本。
 
@@ -18,6 +18,12 @@ Echoy 保留两种不同用途的接入：
 3项体验／设计技能仍手动选用，原 experimental/not-run 状态不变。
 
 ## 克隆与读取
+
+新消费工程首次接入时，在授权工作分支运行：
+
+```sh
+git submodule add -b main https://github.com/MacChu0315/mosaico-dev-skills.git mosaico-dev-skills
+```
 
 在已记录这个 submodule 的消费工程根目录：
 

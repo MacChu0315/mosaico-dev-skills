@@ -1,5 +1,7 @@
 # mosaico-dev-skills
 
+独立仓库：[MacChu0315/mosaico-dev-skills](https://github.com/MacChu0315/mosaico-dev-skills)，主分支 `main`。
+
 从 Echoy 与 Peek 开发中提炼的 Mosaico 共用技能库。包含 **6 项工程技能和 3 项体验／设计试用技能**；不包含产品源码、固件、设备身份、实测录音或既往设备操作授权。
 
 ## 按任务选用

@@ -23,3 +23,7 @@
 已执行 `python3 -m unittest discover -s tests -v`：16/16通过；skill-creator `quick_validate.py` 对9项技能逐项通过；源树哈希检查确认旧参考、音频／协作及3项试用正文保持原字节。普通包检查和git diff --check通过。
 
 远程建仓、远程递归 clone、客户端本次会话动态发现、固件构建、模拟器运行、设备操作和物理验收均不在本轮执行范围。
+
+## 独立远程与当前接入
+
+独立远程改为公开的 `MacChu0315/mosaico-dev-skills`，主分支main；Echoy旧技能分支作为只含.gitmodules和根子模块的入口。产品接入在当前master基线的独立本地分支准备，六项工程技能目录链接完整参考，未自动合入产品。实际发布后以远端SHA、全新递归克隆和离线测试核对；历史本地clone记录不替代这个验证。
