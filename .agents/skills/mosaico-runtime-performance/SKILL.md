@@ -1,6 +1,6 @@
 ---
 name: mosaico-runtime-performance
-description: Use when Mosaico UI, touch, audio or concurrent device work stalls, misses deadlines or exhausts internal memory. Not for cosmetic changes or compiler-only failures.
+description: Use when Mosaico startup, UI, touch, audio or concurrent device work stalls, misses deadlines or exhausts internal memory. Not for cosmetic changes or compiler-only failures.
 ---
 
 # Mosaico runtime performance
@@ -44,6 +44,14 @@ an externally controlled UI may still allocate an unused standalone model.
 Move eligible bulk storage to explicit PSRAM allocations using supported APIs.
 Check DMA/access/stack constraints before moving an object; abundant PSRAM does
 not imply internal allocations can succeed. Avoid global malloc-policy changes.
+
+## Choose when to compute
+
+Separate build-invariant data from configuration/plan-dependent preparation and
+live input. Move only measured, deterministic work to an earlier stage; a dynamic
+result may contain reusable constant tables without being precomputable itself.
+For generated audio, lookup tables or geometry, read
+[build-time preparation and resource contracts](references/build-time-preparation.md).
 
 ## Verify the fix
 

@@ -28,6 +28,14 @@ Retain existing comparison budgets when preserving behavior. Check extreme
 pitches, buffer ownership, stale jobs and output equivalence across chunk sizes.
 Changes to accepted dynamics or timbre need authorization at that scope.
 
+For build-generated audio, compare the production synthesizer's samples and
+semantic metadata (onsets, clip lengths, sample rate, profile and gains), not just
+an audible excerpt. Check target-versus-host numerical differences against the
+accepted budget; host bit equality does not establish target equality. Verify
+the firmware contains the tested resource. Remove diagnostic re-synthesis before
+measuring startup, then recheck random selection, count-in, recording, playback
+and physical sound as applicable. Preserve buffer ownership and failure cleanup.
+
 ## Diagnose before tuning
 
 Locate the first stage where the unwanted result appears. Check source synthesis,
